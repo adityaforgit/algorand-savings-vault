@@ -1,0 +1,136 @@
+#pragma version 11
+#pragma typetrack false
+
+// algopy.arc4.ARC4Contract.approval_program() -> uint64:
+main:
+    intcblock 0 1
+    bytecblock "total_savings" "milestone" 0x151f7c75
+    // smart_contracts/algo_vault/contract.py:5
+    // class AlgoVault(ARC4Contract):
+    txn NumAppArgs
+    bz main___algopy_default_create@13
+    txn OnCompletion
+    !
+    assert
+    txn ApplicationID
+    assert
+    pushbytess 0xfd2c93cd 0x6e2ebc9b 0x688dc75a 0x19d5d1d3 // method "initialize()void", method "deposit(uint64)void", method "get_total_savings()uint64", method "check_milestone()uint64"
+    txna ApplicationArgs 0
+    match initialize deposit get_total_savings check_milestone
+    err
+
+main___algopy_default_create@13:
+    txn OnCompletion
+    !
+    txn ApplicationID
+    !
+    &&
+    return
+
+
+// smart_contracts.algo_vault.contract.AlgoVault.initialize[routing]() -> void:
+initialize:
+    // smart_contracts/algo_vault/contract.py:14
+    // self.total_savings.value = UInt64(0)
+    bytec_0 // "total_savings"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/algo_vault/contract.py:15
+    // self.milestone.value = UInt64(100)
+    bytec_1 // "milestone"
+    pushint 100
+    app_global_put
+    // smart_contracts/algo_vault/contract.py:11-12
+    // # ✅ initialize values
+    // @abimethod()
+    intc_1 // 1
+    return
+
+
+// smart_contracts.algo_vault.contract.AlgoVault.deposit[routing]() -> void:
+deposit:
+    // smart_contracts/algo_vault/contract.py:17-18
+    // # deposit
+    // @abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    pushint 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/algo_vault/contract.py:20
+    // self.total_savings.value += amount
+    intc_0 // 0
+    bytec_0 // "total_savings"
+    app_global_get_ex
+    assert // check self.total_savings exists
+    +
+    bytec_0 // "total_savings"
+    swap
+    app_global_put
+    // smart_contracts/algo_vault/contract.py:17-18
+    // # deposit
+    // @abimethod()
+    intc_1 // 1
+    return
+
+
+// smart_contracts.algo_vault.contract.AlgoVault.get_total_savings[routing]() -> void:
+get_total_savings:
+    // smart_contracts/algo_vault/contract.py:25
+    // return self.total_savings.value
+    intc_0 // 0
+    bytec_0 // "total_savings"
+    app_global_get_ex
+    assert // check self.total_savings exists
+    // smart_contracts/algo_vault/contract.py:22-23
+    // # get savings
+    // @abimethod()
+    itob
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+
+// smart_contracts.algo_vault.contract.AlgoVault.check_milestone[routing]() -> void:
+check_milestone:
+    // smart_contracts/algo_vault/contract.py:30
+    // if self.total_savings.value >= self.milestone.value:
+    intc_0 // 0
+    bytec_0 // "total_savings"
+    app_global_get_ex
+    assert // check self.total_savings exists
+    intc_0 // 0
+    bytec_1 // "milestone"
+    app_global_get_ex
+    assert // check self.milestone exists
+    >=
+    bz check_milestone_after_if_else@3
+    // smart_contracts/algo_vault/contract.py:31
+    // return UInt64(1)
+    intc_1 // 1
+
+check_milestone_after_inlined_smart_contracts.algo_vault.contract.AlgoVault.check_milestone@4:
+    // smart_contracts/algo_vault/contract.py:27-28
+    // # check milestone
+    // @abimethod()
+    itob
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+check_milestone_after_if_else@3:
+    // smart_contracts/algo_vault/contract.py:32
+    // return UInt64(0)
+    intc_0 // 0
+    // smart_contracts/algo_vault/contract.py:27-28
+    // # check milestone
+    // @abimethod()
+    b check_milestone_after_inlined_smart_contracts.algo_vault.contract.AlgoVault.check_milestone@4

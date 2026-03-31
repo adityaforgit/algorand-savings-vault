@@ -1,0 +1,659 @@
+{
+  "version": 3,
+  "sources": [
+    "../../algo_vault/contract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAIA;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;AAAA;;;;;;;;;AASQ;AAA2B;AAA3B;AACA;AAAuB;;AAAvB;AAHH;AAAA;AAMA;;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAEG;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAFH;AAAA;AAOU;AAAA;AAAA;AAAA;AAFV;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAOM;AAAA;AAAA;AAAA;AAA4B;AAAA;AAAA;AAAA;AAA5B;AAAX;;;AACmB;AAHd;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAIU;AAJV",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "algopy.arc4.ARC4Contract.approval_program",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 0 1"
+    },
+    "5": {
+      "op": "bytecblock \"total_savings\" \"milestone\" 0x151f7c75"
+    },
+    "36": {
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "38": {
+      "op": "bz main___algopy_default_create@13",
+      "stack_out": []
+    },
+    "41": {
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "43": {
+      "op": "!",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "44": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "45": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "47": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "48": {
+      "op": "pushbytess 0xfd2c93cd 0x6e2ebc9b 0x688dc75a 0x19d5d1d3 // method \"initialize()void\", method \"deposit(uint64)void\", method \"get_total_savings()uint64\", method \"check_milestone()uint64\"",
+      "defined_out": [
+        "Method(check_milestone()uint64)",
+        "Method(deposit(uint64)void)",
+        "Method(get_total_savings()uint64)",
+        "Method(initialize()void)"
+      ],
+      "stack_out": [
+        "Method(initialize()void)",
+        "Method(deposit(uint64)void)",
+        "Method(get_total_savings()uint64)",
+        "Method(check_milestone()uint64)"
+      ]
+    },
+    "70": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(check_milestone()uint64)",
+        "Method(deposit(uint64)void)",
+        "Method(get_total_savings()uint64)",
+        "Method(initialize()void)",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "Method(initialize()void)",
+        "Method(deposit(uint64)void)",
+        "Method(get_total_savings()uint64)",
+        "Method(check_milestone()uint64)",
+        "tmp%6#0"
+      ]
+    },
+    "73": {
+      "op": "match initialize deposit get_total_savings check_milestone",
+      "stack_out": []
+    },
+    "83": {
+      "op": "err"
+    },
+    "84": {
+      "block": "main___algopy_default_create@13",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "86": {
+      "op": "!",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "87": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ]
+    },
+    "89": {
+      "op": "!",
+      "defined_out": [
+        "tmp%10#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%10#0"
+      ]
+    },
+    "90": {
+      "op": "&&",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "91": {
+      "op": "return",
+      "defined_out": [],
+      "stack_out": []
+    },
+    "92": {
+      "subroutine": "smart_contracts.algo_vault.contract.AlgoVault.initialize[routing]",
+      "params": {},
+      "block": "initialize",
+      "stack_in": [],
+      "op": "bytec_0 // \"total_savings\"",
+      "defined_out": [
+        "\"total_savings\""
+      ],
+      "stack_out": [
+        "\"total_savings\""
+      ]
+    },
+    "93": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "\"total_savings\"",
+        "0"
+      ],
+      "stack_out": [
+        "\"total_savings\"",
+        "0"
+      ]
+    },
+    "94": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "95": {
+      "op": "bytec_1 // \"milestone\"",
+      "defined_out": [
+        "\"milestone\""
+      ],
+      "stack_out": [
+        "\"milestone\""
+      ]
+    },
+    "96": {
+      "op": "pushint 100",
+      "defined_out": [
+        "\"milestone\"",
+        "100"
+      ],
+      "stack_out": [
+        "\"milestone\"",
+        "100"
+      ]
+    },
+    "98": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "99": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "100": {
+      "op": "return",
+      "stack_out": []
+    },
+    "101": {
+      "subroutine": "smart_contracts.algo_vault.contract.AlgoVault.deposit[routing]",
+      "params": {},
+      "block": "deposit",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "104": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%0#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%0#0 (copy)"
+      ]
+    },
+    "105": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "len%0#0"
+      ]
+    },
+    "106": {
+      "op": "pushint 8",
+      "defined_out": [
+        "8",
+        "len%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "len%0#0",
+        "8"
+      ]
+    },
+    "108": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "eq%0#0"
+      ]
+    },
+    "109": {
+      "error": "invalid number of bytes for arc4.uint64",
+      "op": "assert // invalid number of bytes for arc4.uint64",
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "110": {
+      "op": "btoi",
+      "defined_out": [
+        "amount#0"
+      ],
+      "stack_out": [
+        "amount#0"
+      ]
+    },
+    "111": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "amount#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "0"
+      ]
+    },
+    "112": {
+      "op": "bytec_0 // \"total_savings\"",
+      "defined_out": [
+        "\"total_savings\"",
+        "0",
+        "amount#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "0",
+        "\"total_savings\""
+      ]
+    },
+    "113": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "amount#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "114": {
+      "error": "check self.total_savings exists",
+      "op": "assert // check self.total_savings exists",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "115": {
+      "op": "+",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "116": {
+      "op": "bytec_0 // \"total_savings\"",
+      "stack_out": [
+        "tmp%0#1",
+        "\"total_savings\""
+      ]
+    },
+    "117": {
+      "op": "swap",
+      "stack_out": [
+        "\"total_savings\"",
+        "tmp%0#1"
+      ]
+    },
+    "118": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "119": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "120": {
+      "op": "return",
+      "stack_out": []
+    },
+    "121": {
+      "subroutine": "smart_contracts.algo_vault.contract.AlgoVault.get_total_savings[routing]",
+      "params": {},
+      "block": "get_total_savings",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "122": {
+      "op": "bytec_0 // \"total_savings\"",
+      "defined_out": [
+        "\"total_savings\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_savings\""
+      ]
+    },
+    "123": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "124": {
+      "error": "check self.total_savings exists",
+      "op": "assert // check self.total_savings exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "125": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "126": {
+      "op": "bytec_2 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "127": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "128": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "129": {
+      "op": "log",
+      "stack_out": []
+    },
+    "130": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "131": {
+      "op": "return",
+      "stack_out": []
+    },
+    "132": {
+      "subroutine": "smart_contracts.algo_vault.contract.AlgoVault.check_milestone[routing]",
+      "params": {},
+      "block": "check_milestone",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "133": {
+      "op": "bytec_0 // \"total_savings\"",
+      "defined_out": [
+        "\"total_savings\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_savings\""
+      ]
+    },
+    "134": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "135": {
+      "error": "check self.total_savings exists",
+      "op": "assert // check self.total_savings exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "136": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "0"
+      ]
+    },
+    "137": {
+      "op": "bytec_1 // \"milestone\"",
+      "defined_out": [
+        "\"milestone\"",
+        "0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "0",
+        "\"milestone\""
+      ]
+    },
+    "138": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "139": {
+      "error": "check self.milestone exists",
+      "op": "assert // check self.milestone exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "140": {
+      "op": ">=",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "141": {
+      "op": "bz check_milestone_after_if_else@3",
+      "stack_out": []
+    },
+    "144": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "145": {
+      "block": "check_milestone_after_inlined_smart_contracts.algo_vault.contract.AlgoVault.check_milestone@4",
+      "stack_in": [
+        "tmp%0#0"
+      ],
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "146": {
+      "op": "bytec_2 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "147": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "148": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "149": {
+      "op": "log",
+      "stack_out": []
+    },
+    "150": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "151": {
+      "op": "return",
+      "stack_out": []
+    },
+    "152": {
+      "block": "check_milestone_after_if_else@3",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "153": {
+      "op": "b check_milestone_after_inlined_smart_contracts.algo_vault.contract.AlgoVault.check_milestone@4"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+# ========================
+# Node / Frontend
+# ========================
+node_modules/
+.pnp
+.pnp.js
+coverage/
+build/
+dist/
+
+# ========================
+# Logs
+# ========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ========================
+# Env files
+# ========================
+.env
+env/
+
+# ========================
+# OS / Misc
+# ========================
+.DS_Store
+
+# ========================
+# Testing / Reports
+# ========================
+test-results/
+playwright-report/
+.playwright/.cache/
+
+# ========================
+# IDE / Editor
+# ========================
+.idea/
+.vscode/
+
+# ========================
+# Deployment
+# ========================
+.vercel
+.netlify
+
+# ========================
+# Python / AlgoKit (IMPORTANT)
+# ========================
+.venv/
+__pycache__/
+*.pyc
+
+# Algorand build artifacts
+smart_contracts/artifacts/
